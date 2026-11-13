@@ -1,0 +1,56 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<!-- Если форма есть (form != None), показываем её -->
+{% if form != None %}
+<form method="post" id="feedbackForm">
+    {% csrf_token %} <!-- Защита от взлома (обязательно) -->
+
+    <div class="form-group">
+        {{ form.name.label_tag }} {{ form.name }}
+    </div>
+    <div class="form-group">
+        {{ form.email.label_tag }} {{ form.email }}
+    </div>
+    <div class="form-group">
+        {{ form.age.label_tag }} {{ form.age }}
+    </div>
+    <div class="form-group">
+        <label>Оцените поселок:</label><br>
+        {{ form.rating }}
+    </div>
+    <div class="form-group">
+        <label>Что вам понравилось:</label><br>
+        {{ form.liked_land }} {{ form.liked_land.label }}<br>
+        {{ form.liked_nature }} {{ form.liked_nature.label }}<br>
+        {{ form.liked_infra }} {{ form.liked_infra.label }}
+    </div>
+    <div class="form-group">
+        {{ form.interest.label_tag }} {{ form.interest }}
+    </div>
+    <div class="form-group">
+        {{ form.message.label_tag }} {{ form.message }}
+    </div>
+
+    <button type="submit" id="submitBtn" class="btn btn-primary">Отправить отзыв</button>
+</form>
+
+<!-- Если формы нет (пользователь её отправил), показываем благодарность и данные -->
+{% else %}
+<h3>Спасибо за ваш отзыв!</h3>
+<p>Вы сообщили следующие данные:</p>
+<ul>
+    <li><b>Имя:</b> {{ data.name }}</li>
+    <li><b>E-mail:</b> {{ data.email }}</li>
+    <li><b>Возраст:</b> {{ data.age }}</li>
+    <li><b>Оценка:</b> {{ data.rating }}</li>
+    <li><b>Понравилось:</b> {{ data.liked }}</li>
+    <li><b>Интерес:</b> {{ data.interest }}</li>
+    <li><b>Пожелания:</b> {{ data.message }}</li>
+</ul>
+<a href="{% url 'pool' %}" class="btn btn-default">Отправить ещё один отзыв</a>
+{% endif %}
+
+{% endblock %}

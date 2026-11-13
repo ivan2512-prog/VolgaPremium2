@@ -1,0 +1,31 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<div class="jumbotron" style="background-color: #f1f8e9; border-radius: 10px; padding: 30px;">
+    <h1>Добро пожаловать в «ВолгаПремиум»!</h1>
+    <p class="lead">Уютный коттеджный поселок на берегу Волги. Чистый воздух, вековые сосны и вся инфраструктура для комфортной жизни.</p>
+    <hr class="my-4">
+    <p>Мы предлагаем участки от 10 до 30 соток с подведенными коммуникациями. Отличное место для строительства вашего родового гнезда.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Узнать больше о поселке &raquo;</a>
+</div>
+
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-4 text-center">
+        <!-- Картинка с бесплатного фотостока -->
+        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Природа" class="img-responsive" style="height: 200px; width: 100%; object-fit: cover;" />
+        <h3>Чистый воздух</h3>
+        <p>Поселок окружен лесом, рядом нет промышленных предприятий.</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Участки" class="img-responsive" style="height: 200px; width: 100%; object-fit: cover;" />
+        <h3>Свет и вода</h3>
+        <p>Все участки подключены к центральным коммуникациям.</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Инфраструктура" class="img-responsive" style="height: 200px; width: 100%; object-fit: cover;" />
+        <h3>Инфраструктура</h3>
+        <p>Школа, детский сад, магазины и охраняемая территория.</p>
+    </div>
+</div>
+
+{% endblock %}

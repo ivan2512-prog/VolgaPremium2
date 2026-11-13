@@ -1,0 +1,31 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+<p>Полезные ресурсы по теме загородной недвижимости и земельных участков:</p>
+
+<div class="row">
+    <div class="col-md-4 text-center">
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h3>ЦИАН</h3>
+            <p>Крупнейшая база недвижимости в России.</p>
+            <a href="https://www.cian.ru" target="_blank" class="btn btn-default">Перейти на сайт</a>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h3>Домклик</h3>
+            <p>Недвижимость от Сбербанка. Проверенные объекты.</p>
+            <a href="https://domclick.ru" target="_blank" class="btn btn-default">Перейти на сайт</a>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h3>Авито Недвижимость</h3>
+            <p>Объявления о продаже участков и домов.</p>
+            <a href="https://www.avito.ru" target="_blank" class="btn btn-default">Перейти на сайт</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Дома</h3>
+        <video width="100%" controls poster="/media/domik.png">
+            <source src="/media/dom.mp4"  type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+body {
+    padding-top: 70px; 
+}
+
+/* --- ОФОРМЛЕНИЕ МЕНЮ --- */
+.navbar-inverse {
+    background-color: #1a3d2f; /* Темно-зеленый */
+    border-color: #143024;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #e8f5e9; /* Светло-зеленый текст */
+        font-weight: 500;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: #ffc107; /* Желтый при наведении */
+            background-color: #143024;
+        }
+
+/* --- ОФОРМЛЕНИЕ ЗАГОЛОВКОВ --- */
+h1, h2, h3 {
+    color: #1a3d2f;
+    font-weight: 600;
+}
+
+h2 {
+    border-bottom: 2px solid #ffc107; /* Желтая полоса под заголовком */
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* --- ОФОРМЛЕНИЕ ТЕКСТА --- */
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+/* --- ОФОРМЛЕНИЕ ССЫЛОК --- */
+a {
+    color: #2e7d32; /* Зеленая ссылка */
+}
+
+    a:hover {
+        color: #ff6600;
+        text-decoration: underline;
+    }
+
+/* --- ОФОРМЛЕНИЕ ИЗОБРАЖЕНИЙ --- */
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Тень для объема */
+    margin: 10px 0;
+}
+
+/* --- ОФОРМЛЕНИЕ ТАБЛИЦ (на будущее) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+    table th, table td {
+        border: 1px solid #cfd8dc;
+        padding: 10px;
+    }
+
+    table th {
+        background-color: #1a3d2f;
+        color: #ffffff;
+    }
+
+/* --- ОФОРМЛЕНИЕ КНОПОК --- */
+.btn-primary {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+    .btn-primary:hover {
+        background-color: #1a3d2f;
+        border-color: #1a3d2f;
+    }

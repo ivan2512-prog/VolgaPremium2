@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }} - ВолгаПремиум</title>
+    <!-- Подключаем стили -->
+    <link href="{% static 'app/content/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'app/content/site.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <!-- Верхняя панель (Шапка) -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">ВолгаПремиум</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <!-- Меню сайта -->
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'about' %}">О поселке</a></li>
+                    <li><a href="{% url 'contact' %}">Контакты</a></li>
+                    <li><a href="{% url 'links' %}">Полезные ресурсы</a></li>
+                    <li><a href="{% url 'pool' %}">Обратная связь</a></li>
+                    <li><a href="{% url 'blog' %}">Блог</a></li>
+                    <li><a href="{% url 'videopost' %}">Видео</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основное содержимое страниц -->
+    <div class="container body-content">
+        {% block content %}{% endblock %}
+        <hr />
+        <!-- Подвал сайта -->
+        <footer>
+            <p>&copy; {{ year }} - Коттеджный поселок «ВолгаПремиум»</p>
+        </footer>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+</body>
+</html>
